@@ -4,12 +4,13 @@ const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.json({
-    mensaje: '¡Aplicación desplegada con Dokploy!',
+    mensaje: '¡Actualizacion automatica en Dokploy!',
     institucion: 'Universidad del Quindío',
     programa: 'Ingeniería de Sistemas y Computación',
     curso: 'Administración de Infraestructura de TI',
     plataforma: 'Dokploy PaaS',
-    fecha: new Date().toISOString()
+    fecha: new Date().toISOString(),
+    deploy: 'Git Push'
   });
 });
 
@@ -38,3 +39,5 @@ app.listen(port, '0.0.0.0', () => {
   console.log(`Servidor corriendo en puerto ${port}`);
   console.log(`Plataforma: Dokploy PaaS`);
 });
+
+
